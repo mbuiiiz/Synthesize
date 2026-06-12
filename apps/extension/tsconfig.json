@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "declaration": false,
+    "declarationMap": false,
+    "inlineSources": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "verbatimModuleSyntax": true,
+    "jsx": "preserve",
+    "paths": {
+      "@synthesize/shared": ["../../packages/shared/src"]
+    },
+    "types": ["chrome"]
+  },
+  "include": [".plasmo/index.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "build", "dist"]
+}
