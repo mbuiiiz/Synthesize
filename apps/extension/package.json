@@ -1,0 +1,36 @@
+{
+  "name": "@synthesize/extension",
+  "version": "0.1.0",
+  "private": true,
+  "displayName": "Synthesize",
+  "description": "Capture useful web research into a shared team knowledge base.",
+  "type": "module",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "typecheck": "tsc --noEmit"
+  },
+  "manifest": {
+    "permissions": ["sidePanel"],
+    "side_panel": {
+      "default_path": "sidepanel.html"
+    },
+    "action": {
+      "default_title": "Open Synthesize"
+    }
+  },
+  "dependencies": {
+    "@synthesize/shared": "workspace:*",
+    "plasmo": "^0.90.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "typescript": "^5.7.2"
+  }
+}

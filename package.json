@@ -1,0 +1,17 @@
+{
+  "name": "synthesize",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Collaborative browser extension for collecting, sharing, and querying research team knowledge.",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev:extension": "pnpm --filter @synthesize/extension dev",
+    "dev:web": "pnpm --filter @synthesize/web dev",
+    "dev:api": "pnpm --filter @synthesize/api dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
