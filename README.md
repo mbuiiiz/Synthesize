@@ -4,7 +4,7 @@ Collaborative browser extension that helps research teams collect, organize, and
 
 ## Project Structure
 
-- `apps/extension`: Plasmo, React, and TypeScript browser extension with a Chrome side panel UI.
+- `apps/extension`: Plasmo, React, and TypeScript browser extension with a Chrome side panel capture UI.
 - `apps/api`: Node.js, Express, and TypeScript API placeholder.
 - `apps/web`: React and TypeScript dashboard placeholder for a future web workspace.
 - `packages/shared`: Shared TypeScript types and utilities.
@@ -46,7 +46,9 @@ Then load the generated Chrome extension:
 4. Select `apps/extension/build/chrome-mv3-dev`.
 5. Open a normal webpage and click the Synthesize extension icon.
 
-The extension should open a side panel with the placeholder capture form.
+The extension should open a side panel with a `Capture Page` button. It captures
+selected text from the active tab when available, otherwise the page's visible
+text, and displays a local preview with a `Copy JSON` debugging action.
 
 ## Run The API
 

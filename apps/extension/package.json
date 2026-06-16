@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit"
   },
   "manifest": {
-    "permissions": ["sidePanel"],
+    "permissions": ["activeTab", "scripting", "sidePanel", "storage"],
+    "host_permissions": ["http://*/*", "https://*/*"],
     "side_panel": {
       "default_path": "sidepanel.html"
     },
