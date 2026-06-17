@@ -2,6 +2,26 @@
 version: '3.8'
 
 services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: synthesize-db
+    restart: always
+    environment:
+      POSTGRES_USER: synthesize_admin
+      POSTGRES_PASSWORD: wewillgetintobigtech123
+      POSTGRES_DB: synthesize_db
+    ports:
+    - "5432:5432"
+    volumes:
+      - ./apps/backend/db/migrations:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U synthesize_admin -d synthesize_db"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
+    
   web:
     build:
       context: . # Crucial: This tells Docker to use the root directory as the build context
@@ -16,3 +36,6 @@ services:
       - /app/node_modules
       - /app/apps/web/node_modules
       - /app/packages/shared/node_modules
+
+volumes:
+  postgres_data: # Defines the named volume for data persistence
