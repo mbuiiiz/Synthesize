@@ -7,13 +7,17 @@ Collaborative browser extension that helps research teams collect, organize, and
 - `apps/extension`: Plasmo, React, and TypeScript browser extension with a Chrome side panel capture UI.
 - `apps/api`: Node.js, Express, and TypeScript API placeholder.
 - `apps/web`: React and TypeScript dashboard placeholder for a future web workspace.
+- `apps/backend`: Python for backend with FASTAPI, PostgreSQL for db.
 - `packages/shared`: Shared TypeScript types and utilities.
 - `docs`: MVP architecture and planning notes.
 
 ## Prerequisites
 
-- Node.js 22 or newer
-- pnpm 9
+- Docker 
+
+```bash
+docker compose up --build
+```
 - Chrome or another Chromium-based browser for extension testing
 
 Install pnpm if needed:
