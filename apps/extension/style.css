@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 80 18% 97%;
+    --foreground: 156 18% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 156 18% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 156 18% 11%;
+    --primary: 157 39% 23%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 144 22% 92%;
+    --secondary-foreground: 157 39% 23%;
+    --muted: 144 15% 94%;
+    --muted-foreground: 150 8% 39%;
+    --accent: 144 22% 92%;
+    --accent-foreground: 157 39% 23%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 140 12% 82%;
+    --input: 140 12% 82%;
+    --ring: 157 39% 23%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 156 18% 11%;
+    --foreground: 80 18% 97%;
+    --card: 156 16% 14%;
+    --card-foreground: 80 18% 97%;
+    --popover: 156 16% 14%;
+    --popover-foreground: 80 18% 97%;
+    --primary: 144 32% 72%;
+    --primary-foreground: 157 39% 16%;
+    --secondary: 154 12% 22%;
+    --secondary-foreground: 80 18% 97%;
+    --muted: 154 12% 22%;
+    --muted-foreground: 144 10% 70%;
+    --accent: 154 12% 22%;
+    --accent-foreground: 80 18% 97%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 154 12% 25%;
+    --input: 154 12% 25%;
+    --ring: 144 32% 72%;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+body {
+  @apply bg-background text-foreground;
+  margin: 0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}

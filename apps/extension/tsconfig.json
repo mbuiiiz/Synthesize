@@ -21,6 +21,7 @@
     "verbatimModuleSyntax": true,
     "jsx": "preserve",
     "paths": {
+      "@/*": ["./*"],
       "@synthesize/shared": ["../../packages/shared/src"]
     },
     "types": ["chrome"]
