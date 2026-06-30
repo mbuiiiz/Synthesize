@@ -1,12 +1,14 @@
+import os
+
 import psycopg
 from pgvector.psycopg import register_vector
 
 DB_PARAMS = {
-    "dbname": "synthesize_db",
-    "user": "synthesize_admin",
-    "password": "securepassword123",
-    "host": "localhost", # Docker exposes to local machine
-    "port": "5432"
+    "dbname": os.environ.get("POSTGRES_DB", "synthesize_db"),
+    "user": os.environ.get("POSTGRES_USER", "synthesize_admin"),
+    "password": os.environ.get("POSTGRES_PASSWORD", ""),
+    "host": os.environ.get("DB_HOST", "localhost"),
+    "port": os.environ.get("DB_PORT", "5432"),
 }
 
 def get_connection():
